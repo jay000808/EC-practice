@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root "public/homes#top"
 
   get "/about", to: "public/homes#about"
+  get "/admin", to: "admin/homes#top"
   # get "/end_users/mypage", to: "public/end_users#show"
 
   scope module: :public do

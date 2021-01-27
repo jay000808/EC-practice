@@ -26,6 +26,23 @@
           </nav>
         </div>
       </header>
+    <% elsif admin_signed_in? %>
+      <header class="navbar navbar-fixed-top navbar-inverse">
+        <div class="container">
+          <nav class='nav navbar-nav navbar-left' >
+            <%= link_to "NaganoCake", root_path %>
+          </nav>
+          <nav>
+            <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to "商品一覧" %></li>
+              <li><%= link_to "会員一覧" %></li>
+              <li><%= link_to "注文履歴一覧" %></li>
+              <li><%= link_to "ジャンル一覧" %></li>
+              <li><%= link_to "ログアウト", destroy_admin_session_path, :notice => "locked", class: "glyphicon glyphicon-log-out", method: :delete %></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
     <% else %>
       <header class="navbar navbar-fixed-top navbar-inverse">
         <div class="container">
