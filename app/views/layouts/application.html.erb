@@ -23,7 +23,7 @@
               <li><%= link_to "カート"%></li>
               <li><%= link_to "ログアウト", destroy_end_user_session_path, :notice => "locked", class: "glyphicon glyphicon-log-out", method: :delete %></li>
             </ul>
-          </nav>  
+          </nav>
         </div>
       </header>
     <% else %>
@@ -43,7 +43,7 @@
         </div>
       </header>
     <% end %>
-    
+
     <main>
       <%= yield %>
     </main>
