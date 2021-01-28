@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :admin
   devise_for :end_users
-  devise_for :admins
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
   root "public/homes#top"
 
   get "/about", to: "public/homes#about"
@@ -12,7 +13,7 @@ Rails.application.routes.draw do
     resource :end_users, only: [:show, :edit, :update]
   end
 
-  namespace :admin do
-
-  end
+  # namespace :admin do
+  #   devise_for :admin
+  # end
 end

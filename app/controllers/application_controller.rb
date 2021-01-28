@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
 
   protected
   def configure_permitted_parameters
-    needs = [:first_name, :last_name, :first_name_kana, :last_name_kana, :postal_code, :address, :tel_number ]
+    needs = [:first_name, :last_name, :first_name_kana, :last_name_kana, :postal_code, :address, :tel_number]
     devise_parameter_sanitizer.permit(:sign_up, keys: needs)
   end
 end
